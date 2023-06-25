@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'scripts.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{% endblock scripts %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+{% endblock styles %}
+
+{% block content %}
+<h2 class="title">Введите информацию располагающуюся на титульном листе:</h2><br>
+
+<form method="post" action="/data_title/">
+  {% csrf_token %}
+  <div class="form-group row">
+    <div class="col-md-6 text-right">
+      <label for="fname" class="align-self-center text-right">Фамилия студента:</label>
+    </div>
+    <div class="col-md-4 text-left">
+      <input name="studentSurname" type="text" class="form-control" />
+    </div>
+  </div><br>
+
+  <div class="form-group row">
+    <div class="col-md-6 text-right">
+      <label for="fname" class="col-auto align-self-center">Инициалы студента:</label>
+    </div>
+    <div class="col-sm-2 col-xs-12">
+      <input name="studentName" type="text" class="form-control" />
+    </div>
+    <div class="col-sm-2 col-xs-12">
+      <input name="studentPatronymic" type="text" class="form-control" />
+    </div>
+  </div><br>
+
+  <div class="form-group row">
+    <div class="col-md-6 text-right">
+      <label for="fname" class="col-auto align-self-center">Фамилия преподавателя:</label>
+    </div>
+    <div class="col-md-4 text-left">
+      <input name="teacherSurname" type="text" class="form-control" />
+    </div>
+  </div><br>
+
+  <div class="form-group row">
+    <div class="col-md-6 text-right">
+      <label for="fname" class="col-auto align-self-center">Инициалы преподавателя:</label>
+    </div>
+    <div class="col-sm-2 col-xs-12">
+      <input name="teacherName" type="text" class="form-control" />
+    </div>
+    <div class="col-sm-2 col-xs-12">
+      <input name="teacherPatronymic" type="text" class="form-control" />
+    </div>
+  </div><br>
+
+  <div class="form-group row">
+    <div class="col-md-6 text-right">
+      <label for="fname" class="col-auto align-self-center">Название лабораторной работы:</label>
+    </div>
+    <div class="col-md-4 text-left">
+      <input name="nameLab" type="text" class="form-control" />
+    </div>
+  </div><br>
+
+  <div class="form-group row">
+    <div class="col-md-6 text-right">
+      <label for="fname" class="col-auto align-self-center">Номер лабораторной работы:</label>
+    </div>
+    <div class="col-md-2 text-left">
+      <input name="numberLab" type="text" class="form-control" pattern="[0-9]+" title="Пожалуйста, введите только цифры"
+        required />
+    </div>
+  </div><br>
+
+  <div class="form-group row">
+    <div class="col-md-6 text-right">
+      <label for="fname" class="col-auto align-self-center">Год лабораторной работы:</label>
+    </div>
+    <div class="col-md-2 text-left">
+      <input name="yearLab" type="text" class="form-control" />
+    </div>
+  </div><br>
+</form>
+
+<div class="text-center">
+  <h2 style="font-size: 2rem; color: rgb(255, 255, 255); font-weight: bold; text-align: center; margin-top: 2rem;">
+    Введите информацию
+    для основной части:</h2><br>
+  <button class="btn-paragraph" onclick="addBlock()">Добавить параграф</button>
+</div>
+<br>
+
+<form method="post" action="/data_title/">
+  {% csrf_token %}
+  <div id="container">
+
+  </div>
+</form>
+
+<div class="text-center">
+  <button class="btn-report" onclick="createReport()">Создать отчёт</button>
+</div>
+{% endblock content %}

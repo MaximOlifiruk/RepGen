@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'scripts.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{% endblock scripts %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+{% endblock styles %}
+
+{% block content %}
+<h2 class="title">RepGen - платформа позволяющая быстро создать отчёт по лабораторной работе, практическому заданию и
+  т.д:</h2><br>
+
+<div class="text-center">
+  <form action="/result/" method="post">
+    {% csrf_token %}
+    <button class="btn-report" type="submit">Создать отчёт</button>
+  </form>
+</div>
+{% endblock content %}

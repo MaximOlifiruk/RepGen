@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'scripts.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+{% endblock scripts %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+{% endblock styles %}
+
+{% block content %}
+<h2 class="title">Всё прошло успешно! </h2>
+<a href="result_report/result_document.docx" download class="download-link">Скачать документ</a>
+{% endblock content %}

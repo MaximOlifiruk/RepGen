@@ -1,0 +1,12 @@
+body {
+    background: linear-gradient(to bottom, #380d0d, #0e0e78, #450945);
+
+}
+
+.custom-div {
+    width: 700px;
+    height: auto;
+    padding: 10px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.15);
+}
