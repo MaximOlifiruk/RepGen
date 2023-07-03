@@ -14,32 +14,46 @@ RepGen allows users to create reports by entering their personal information suc
 + virtualenv
 
 ## Setup to run
-+ Download zip file to your local machine
-+ Extract the zip file
-+ Open terminal/cmd prompt
-+ Goto that Path
-
-## Example
+1. Download zip file to your local machine
+2. Extract the zip file
+3. Open terminal/cmd prompt
+4. Goto that Path \
+   Example: 
+```
 cd ~/Desktop/RepGen-development/RepGen-development
+```
 
-## Create a new virtual environment in that directory
-python -m pip install virtualenv<br>
+5. Create a new virtual environment in that directory
+
+```
+python -m pip install virtualenv
 python -m venv myenv
+```
 
-## Activate virtual environment
+6. Activate virtual environment
+```
 .\myenv\Scripts\activate
+```
 
-## Command line to install all dependencies
+7. Command line to install all dependencies
+```
 pip install -r requirements.txt
+```
 
-## Then
+8. Then
+```
 cd src
+```
 
-## Command line to run your program
+9. Command line to run your program
+```
 python manage.py runserver
+```
 
-## Now open your browser and go to this address
+10. Now open your browser and go to this address
+```
 http://127.0.0.1:8000
+```
 
 ## Screenshots
 
