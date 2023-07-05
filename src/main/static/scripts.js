@@ -68,7 +68,7 @@ function addBlock() {
     };
     addButtonRow.appendChild(addImageButton);
 
-    var addImageTextButton = createButton("Вставить текст с картинки")
+    var addImageTextButton = createButton("Вставить текст с картинки");
     addImageTextButton.onclick = function () {
         var blockTextImage = createBlock('paragraphImageText');
 
@@ -127,7 +127,7 @@ function buttonText(block){
         createText(blockText);
         block.appendChild(blockText);
     };
-    return addTextButton
+    return addTextButton;
 }
 
 function createBlock(className) {
@@ -140,7 +140,7 @@ function createBlock(className) {
     if (className == 'paragraph') {
         block.style.border = "1px solid white";
     }
-    return block
+    return block;
 }
 
 function createLabel() {
@@ -148,7 +148,7 @@ function createLabel() {
     topic.innerHTML = "Название темы: ";
     topic.classList.add("align-self-center");
     topic.style.marginLeft = "20px";
-    return topic
+    return topic;
 }
 
 function createInput() {
@@ -156,7 +156,7 @@ function createInput() {
     input.type = "text";
     input.classList.add("form-control", "col-md-4");
     input.name = "paragraphName";
-    return input
+    return input;
 }
 
 function createDeleteButton(block) {
@@ -209,8 +209,8 @@ function createText(block) {
 }
 
 function createImage(block) {
-    var image = document.createElement("img")
-    block.appendChild(image)
+    var image = document.createElement("img");
+    block.appendChild(image);
 }
 
 function createReport() {
@@ -272,7 +272,7 @@ function createReport() {
         }
 
 
-        const csrf = document.getElementsByName('csrfmiddlewaretoken')
+        const csrf = document.getElementsByName('csrfmiddlewaretoken');
 
         $.ajax({
             url: `${url}data_title/`,
