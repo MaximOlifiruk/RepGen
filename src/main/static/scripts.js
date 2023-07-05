@@ -1,10 +1,9 @@
-const url = window.location.href
-console.log('Hello')
+const url = window.location.href;
 
 function addBlock() {
-    var block = createBlock('paragraph')
+    var block = createBlock('paragraph');
 
-    var topic = createLabel()
+    var topic = createLabel();
     var input = createInput();
 
     var header = document.createElement("div");
@@ -25,7 +24,7 @@ function addBlock() {
     addTextButton = buttonText(block);
     addButtonRow.appendChild(addTextButton);
 
-    var addImageButton = createButton("Вставить картинку")
+    var addImageButton = createButton("Вставить картинку");
     addImageButton.onclick = function () {
         var blockImage = createBlock('paragraphImage');
 
@@ -156,7 +155,7 @@ function createInput() {
     var input = document.createElement("input");
     input.type = "text";
     input.classList.add("form-control", "col-md-4");
-    input.name = "paragraphName"
+    input.name = "paragraphName";
     return input
 }
 
@@ -240,11 +239,11 @@ function createReport() {
         containerBlocks = container.getElementsByClassName('paragraph');
         paragraphsData = []
         for (var i = 0; i < containerBlocks.length; i++) {
-            paragraphData = {}
+            paragraphData = {};
             paragraphName = containerBlocks[i].querySelectorAll('input[name="paragraphName"]')[0];
             paragraphData['id'] = i;
             paragraphData['paragraphName'] = paragraphName.value;
-            paragraphData['paragraphContent'] = []
+            paragraphData['paragraphContent'] = [];
 
             var elements = containerBlocks[i].querySelectorAll('.paragraphImage, .paragraphText, .paragraphImageText');
 
