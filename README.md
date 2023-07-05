@@ -40,7 +40,7 @@ python -m venv myenv
 pip install -r requirements.txt
 ```
 
-8. Then
+8. Then go to the src folder
 ```
 cd src
 ```
